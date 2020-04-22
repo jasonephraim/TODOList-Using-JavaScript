@@ -12,7 +12,9 @@ addTaskButton.addEventListener("click", function () {
   let taskTitle = taskInput.value;
   let liItem = document.createElement("li");
   liItem.innerHTML =
-    "<li><form class='form-inline'><div class='form-group mb-2'><input type='checkbox' class='form-check-input' /><label>" +
+    "<li id='" +
+    taskTitle +
+    "'><form class='form-inline'><div class='form-group mb-2'><input type='checkbox' class='form-check-input' /><label>" +
     taskTitle +
     "</label><button class='btn btn-danger delete'>Delete</button></div></form></li>";
 
