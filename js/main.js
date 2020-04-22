@@ -8,11 +8,12 @@ let completedTasksHolder = document.getElementById("completed-tasks"); //complet
 // click add task button enters new task
 
 addTaskButton.addEventListener("click", function () {
+  event.preventDefault();
   let taskTitle = taskInput.value;
   let liItem = document.createElement("li");
   liItem.innerHTML =
     "<li><form class='form-inline'><div class='form-group mb-2'><input type='checkbox' class='form-check-input' /><label>" +
-    taskTitle.value +
+    taskTitle +
     "</label><button class='btn btn-danger delete'>Delete</button></div></form></li>";
 
   incompleteTaskHolder.appendChild(liItem);
